@@ -1,0 +1,223 @@
+@import url(https://fonts.googleapis.com/css?family=Josefin%20Sans);
+:root{
+    --dred: hsl(0, 36%, 70%);   /*Desaturated*/ 
+    --sred: hsl(0, 93%, 68%);   /*Soft*/ 
+    --dgRed: hsl(0, 6%, 24%);  /*Dark Grayish*/ 
+    --lg1:linear-gradient(135deg,hsl(0, 0%, 100%),hsl(0, 100%, 98%));
+    --lg2:linear-gradient(135deg, hsl(0, 80%, 86%), hsl(0, 74%, 74%));
+}
+*{
+    font-family: 'Josefin Sans';
+}
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+div,
+span,
+img{
+    margin:0;
+    padding:0;
+}
+
+body{
+    height:100vh;
+}
+
+/* start of pre-classes */
+.line-space{
+    line-height: 1.4rem;
+}
+.weight3{
+    font-weight: lighter !important;
+}
+.weight4{
+    font-weight: 400;
+}
+.weight6{
+    font-weight: 600;
+}
+.font16{
+    font-size: 16px;
+}
+.font20{
+    font-size:2em;
+}
+.flex{
+    display: flex;
+}
+.grid{
+    display: grid;
+}
+.align-center{
+    align-items: center;
+    justify-content: center;
+}
+
+.moba-hero{
+    display: none;
+}
+.logo{
+    width:8rem!important; 
+    height:auto;
+    
+}
+.margin{
+    margin-top: 4rem;
+}
+.spacing{
+    letter-spacing: 1rem;
+}
+.uppercase{
+    text-transform: uppercase;
+}
+.lowercase{
+    text-transform: lowercase;
+}
+.gap{
+    gap:5rem;
+}
+.relative-position{
+    position:relative;
+}
+.absolute-position{
+    position:absolute;
+}
+
+.border-radius{
+    border-radius: 3rem;
+}
+
+/* end of pre-classes */
+
+/* custom styling */
+
+.main{
+    background-image: url(../images/bg-pattern-desktop.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    flex-direction: column;
+    padding:3rem 3rem 3rem 10rem;
+    width: max-content;
+}
+.main > *{
+    width:65%;
+    
+}
+main h1 span{
+    display: block;
+}
+
+.main h1 span:nth-child(1){
+    color:var(--dred)
+}
+.main p{
+    color:var(--dred) !important;
+}
+.email{
+    flex-direction: column;
+}
+.email input[type="email"]{
+    height:2.5rem;
+    width:93%;
+    padding-left: 5%;
+    padding-right: 0.1rem;
+    border:1px solid var(--dred);
+    font-size: 16px;
+}
+.email input[type='email']:focus{
+    border:1px solid var(--dred);
+    
+}
+.email input[type='email']:focus-visible{
+    border:1px solid var(--dred);
+    outline: none;
+}
+.email input[type="email"]::placeholder{
+    color:var(--dred);
+    font-size: 16px;
+}
+
+.error{
+    display: none;
+    width:1.4rem;
+    height:1.4rem;
+    top:0;
+    right:0;
+    bottom: 0;
+    transform: translate(-5.3rem,0.65rem);
+}
+
+.email button{
+    cursor: pointer;
+    width:5rem;
+    height:2.75rem;
+    border:0;
+    background: var(--lg2);
+    top:0;
+    right:0;
+    bottom: 0;
+    box-shadow: 0.3rem 0.5rem 2rem 0 var(--dred);
+}
+
+.email button:hover{
+    
+    background:hsl(0, 80%, 86%);
+}
+.email button:active{
+    width: 4.8rem;
+    height:2.75rem;
+}
+.email p{
+    display: none;
+    font-size: 0.75rem;
+    padding-top: 0.5rem;
+    width:85%;
+    color: var(--sred) !important;
+}
+/* end of custom style */
+
+
+@media screen and (max-width:375px) {
+    body{
+        height:auto;
+    }
+    .gap{
+        gap:2rem;
+    }
+    .logo{
+        display:block;
+        
+        padding:1rem 01rem !important;
+       margin-top: 0.5rem !important;
+    }
+    .main{
+        padding:0;
+        
+    }
+
+    .main >*{
+        margin:1.3rem;
+        padding:0rem;
+        width: 90%;
+        text-align: center;
+    }
+    .main > img{
+        width:auto;
+        margin:0 !important;
+    }
+    
+    .desktop-hero{
+        display: none;
+    }
+    .moba-hero{
+        display:block;
+    }
+    .email{
+        padding-bottom: 3rem;
+    }
+}

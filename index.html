@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Base Apparel coming soon page</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <link rel="stylesheet" type="text/css" href="./css/style.css">
+  <script src="./js/script.js"></script>
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+</head>
+<body class="flex">
+<main class="main flex gap padding" role="main">
+  <img src="images/logo.svg" class="logo" alt="">
+  <img src="./images/hero-mobile.jpg" alt="moba Image" class="moba-hero">
+  <h1 class="margin spacing uppercase font20">
+    <span class="weight3">We're</span>
+    <span>coming</span>
+    <span>soon</span>
+    
+  </h1>
+
+  <p class="line-space font16">
+    Hello fellow shoppers! We're currently building our new fashion store. 
+  Add your email below to stay up-to-date with announcements and our launch deals.
+</p>
+  <span class="flex align-center email relative-position">
+      <input type="email" class="border-radius input" id="email" placeholder="Email Address">
+      <img id="error_img" class="absolute-position error"  src="./images/icon-error.svg" alt="">
+    <button class="flex align-center border-radius input absolute-position" type="button" onclick="submit();">
+      <img src="./images/icon-arrow.svg" alt="arrow">
+    </button>
+    <p id="error_msg">Please provide a valid email</p>
+  </span>
+  
+</main>
+<img src="images/hero-desktop.jpg" alt="Image" class="desktop-hero padding">
+
+  <footer hidden="true">
+    <p class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+      Coded by <a href="#">Amit Dhakal</a>.
+    </p>
+  </footer>
+</body>
+</html>
